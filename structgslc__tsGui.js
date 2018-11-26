@@ -1,0 +1,28 @@
+var structgslc__tsGui =
+[
+    [ "asFont", "structgslc__tsGui.html#a78c133344855170060c3db9d9fe9699e", null ],
+    [ "asInputMap", "structgslc__tsGui.html#adf5f545cdf3cae2556f0fdf473d4c148", null ],
+    [ "asPage", "structgslc__tsGui.html#a44af0b3ef3a0d06e70fd01e04877351c", null ],
+    [ "bRedrawPartialEn", "structgslc__tsGui.html#a2d2e7104967ed372a2cee5164c3f2706", null ],
+    [ "nDispDepth", "structgslc__tsGui.html#ac9cfaaaad375f0226b98c9e659b0f570", null ],
+    [ "nDispH", "structgslc__tsGui.html#ad608d97f5942460a7de20d386fb75a5d", null ],
+    [ "nDispW", "structgslc__tsGui.html#a526017d1503465bf204e545782954373", null ],
+    [ "nFontCnt", "structgslc__tsGui.html#ae5a5172cefcd834e7baf0ff5579fcd5a", null ],
+    [ "nFontMax", "structgslc__tsGui.html#ac758d0abbc79f110fc6efb78e6fef4c7", null ],
+    [ "nFrameRateCnt", "structgslc__tsGui.html#a45fc141b140e65edca93cbb6ff64cb10", null ],
+    [ "nFrameRateStart", "structgslc__tsGui.html#ab112c20c1939b8ab993efdd6906f91cd", null ],
+    [ "nInputMapCnt", "structgslc__tsGui.html#a6ae1ed8ecbcfc4792af630a714fd7bf6", null ],
+    [ "nInputMapMax", "structgslc__tsGui.html#aa7bcb2ef7b8c4d9c930f6904d8d16178", null ],
+    [ "nPageCnt", "structgslc__tsGui.html#a7d2e138a9ee3576165a129a01db8d66a", null ],
+    [ "nPageMax", "structgslc__tsGui.html#afb8a9b82f2a2cc11be1f4851c9058131", null ],
+    [ "nTouchLastPress", "structgslc__tsGui.html#a8ce8e7d39004995b51f851e8e17c998b", null ],
+    [ "nTouchLastX", "structgslc__tsGui.html#a9a86fa51b586f73da194d76d40e258a9", null ],
+    [ "nTouchLastY", "structgslc__tsGui.html#a1da48204c2f183c65c2ed5896c3352c0", null ],
+    [ "pCurPage", "structgslc__tsGui.html#a9d17c57a2dd9cc1d0b56b8e75eb230b5", null ],
+    [ "pCurPageCollect", "structgslc__tsGui.html#a0520c539186e6872415b6e4f76547c4e", null ],
+    [ "pfuncPinPoll", "structgslc__tsGui.html#a996a557aed81252e487a93b192f76fc9", null ],
+    [ "pfuncXEvent", "structgslc__tsGui.html#ad92a76dd79c9f99709c69c81154cac58", null ],
+    [ "pvDriver", "structgslc__tsGui.html#a8f03fd974a270104a39a03a92d69bb2e", null ],
+    [ "sElemTmpProg", "structgslc__tsGui.html#a95db3176631d94437e8c2c2f3de68033", null ],
+    [ "sImgRefBkgnd", "structgslc__tsGui.html#a91ac1b7aa601bb217ae3a67340b82325", null ]
+];

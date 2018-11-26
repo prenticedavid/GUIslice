@@ -1,0 +1,26 @@
+digraph "gslc_tsPage"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="gslc_tsPage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pfuncXEvent" ,fontname="Helvetica"];
+  Node2 [label="gslc_tsEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsEvent.html",tooltip="Event structure. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sCollect" ,fontname="Helvetica"];
+  Node3 [label="gslc_tsCollect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsCollect.html",tooltip="Element collection struct. "];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pfuncXEvent" ,fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pElemRefTracked\nasElemRef" ,fontname="Helvetica"];
+  Node4 [label="gslc_tsElemRef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsElemRef.html",tooltip="Element reference structure. "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pElem" ,fontname="Helvetica"];
+  Node5 [label="gslc_tsElem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsElem.html",tooltip="Element Struct. "];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pfuncXEvent" ,fontname="Helvetica"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rElem" ,fontname="Helvetica"];
+  Node6 [label="gslc_tsRect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsRect.html",tooltip="Rectangular region. Defines X,Y corner coordinates plus dimensions. "];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pElemRefParent" ,fontname="Helvetica"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pTxtFont" ,fontname="Helvetica"];
+  Node7 [label="gslc_tsFont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsFont.html",tooltip="Font reference structure. "];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sImgRefGlow\nsImgRefNorm" ,fontname="Helvetica"];
+  Node8 [label="gslc_tsImgRef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsImgRef.html",tooltip="Image reference structure. "];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" colElemFill\ncolElemFillGlow\ncolElemFrame\ncolElemTextGlow\ncolElemText\ncolElemFrameGlow" ,fontname="Helvetica"];
+  Node9 [label="gslc_tsColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structgslc__tsColor.html",tooltip="Color structure. Defines RGB triplet. "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" asElem" ,fontname="Helvetica"];
+}

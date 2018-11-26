@@ -1,0 +1,28 @@
+var structgslc__tsElem =
+[
+    [ "colElemFill", "structgslc__tsElem.html#ae12d8969cd12810dc4aa415c51688350", null ],
+    [ "colElemFillGlow", "structgslc__tsElem.html#a1b6ee4ea769fdb056b512e7e07feb256", null ],
+    [ "colElemFrame", "structgslc__tsElem.html#a87f79d7b2d65ce25abffe599d6befe1d", null ],
+    [ "colElemFrameGlow", "structgslc__tsElem.html#a3cbf751b96c6cf95cd91ff7ca2329724", null ],
+    [ "colElemText", "structgslc__tsElem.html#a0551ee56de3fd6fa7010a00da76acd16", null ],
+    [ "colElemTextGlow", "structgslc__tsElem.html#a809ba01b8f421d6e482caeb9273e8ae9", null ],
+    [ "eTxtAlign", "structgslc__tsElem.html#a4fbf7ad123b3da62ac4a3a0893a195b0", null ],
+    [ "eTxtFlags", "structgslc__tsElem.html#a83b02ba59e5cb2a24007af0f814848b1", null ],
+    [ "nFeatures", "structgslc__tsElem.html#af71ca26e67bd85ada386b986102317b6", null ],
+    [ "nGroup", "structgslc__tsElem.html#ae618c960d1f2ab2d0a99542fcdf4c28b", null ],
+    [ "nId", "structgslc__tsElem.html#a44fcc90d830db7ce27222ca7aadb2de5", null ],
+    [ "nStrBufMax", "structgslc__tsElem.html#a40d26094ce2b94a29134f3044bef3246", null ],
+    [ "nTxtMargin", "structgslc__tsElem.html#ad1275833d3b3ece24a2d4a20488511ea", null ],
+    [ "nType", "structgslc__tsElem.html#a78e9726ee82d21c3183d178bb36443ff", null ],
+    [ "pElemRefParent", "structgslc__tsElem.html#a0b0722c076e22da4eece9f9edcc633a0", null ],
+    [ "pfuncXDraw", "structgslc__tsElem.html#a184e6fdf8b0a31af4b7ad51147cb1cff", null ],
+    [ "pfuncXEvent", "structgslc__tsElem.html#aede87cff8bf93925f8f78339b21ef693", null ],
+    [ "pfuncXTick", "structgslc__tsElem.html#ade0020d7a0f61ad96404617e2675ea76", null ],
+    [ "pfuncXTouch", "structgslc__tsElem.html#a41d8076f6211b21fe710aab5e36e388a", null ],
+    [ "pStrBuf", "structgslc__tsElem.html#a0154ffd26a353065b42028a71f20c15a", null ],
+    [ "pTxtFont", "structgslc__tsElem.html#a09f32376e7258e854af327adc2c1b55a", null ],
+    [ "pXData", "structgslc__tsElem.html#a0f70caff1a83fa73ad614e11f5711d5d", null ],
+    [ "rElem", "structgslc__tsElem.html#a840acdd42165a6815a9aabe25f597cbe", null ],
+    [ "sImgRefGlow", "structgslc__tsElem.html#a4af40c2818d9193250909b9338d520de", null ],
+    [ "sImgRefNorm", "structgslc__tsElem.html#a08ff952772a376a851ef362ce9b5320f", null ]
+];

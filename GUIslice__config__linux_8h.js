@@ -1,0 +1,27 @@
+var GUIslice__config__linux_8h =
+[
+    [ "ADATOUCH_FLIP_X", "GUIslice__config__linux_8h.html#af1d4ad707ac91b54d3cd896af4ee4155", null ],
+    [ "ADATOUCH_FLIP_Y", "GUIslice__config__linux_8h.html#a6d7fde6cee507d3fb794d612bf9df4be", null ],
+    [ "ADATOUCH_SWAP_XY", "GUIslice__config__linux_8h.html#a8daf91686ea2722cc11969563c5da89c", null ],
+    [ "DEBUG_ERR", "GUIslice__config__linux_8h.html#a653623da09fe4c8356e422b4ce555b70", null ],
+    [ "DRV_DISP_SDL1", "GUIslice__config__linux_8h.html#a1c4b42c57c54adbdae61d4618c70994c", null ],
+    [ "DRV_SDL_FIX_START", "GUIslice__config__linux_8h.html#a363aa54f493da5be183edc0ac7ad68cf", null ],
+    [ "DRV_SDL_MOUSE_SHOW", "GUIslice__config__linux_8h.html#afb371d26207e3afd36e0540094c10021", null ],
+    [ "DRV_TOUCH_TSLIB", "GUIslice__config__linux_8h.html#a88cc6330a77b78bcedb5a7f714bcdf71", null ],
+    [ "GSLC_BMP_TRANS_EN", "GUIslice__config__linux_8h.html#a7f3bbe339ca6ce43c4bd0e794d560633", null ],
+    [ "GSLC_BMP_TRANS_RGB", "GUIslice__config__linux_8h.html#a309e3474781459c9664e311358c85bfd", null ],
+    [ "GSLC_DEV_FB", "GUIslice__config__linux_8h.html#acefcc9c5b93c9a898722694d5892af0f", null ],
+    [ "GSLC_DEV_TOUCH", "GUIslice__config__linux_8h.html#a8d7040c5cd3f8effb1d83eeac04dbfd2", null ],
+    [ "GSLC_DEV_VID_DRV", "GUIslice__config__linux_8h.html#a747523291d465b4433fa732176b2434e", null ],
+    [ "GSLC_FEATURE_COMPOUND", "GUIslice__config__linux_8h.html#a80b47b9dc53c20d60c964c60713c9d3f", null ],
+    [ "GSLC_FEATURE_INPUT", "GUIslice__config__linux_8h.html#aa39bda699a38002977bb319d59b40bdb", null ],
+    [ "GSLC_FEATURE_XGAUGE_RADIAL", "GUIslice__config__linux_8h.html#a834dafd09f2bd9b89d3408eb5fbb2b04", null ],
+    [ "GSLC_FEATURE_XGAUGE_RAMP", "GUIslice__config__linux_8h.html#a9814a267b005636de01648f98364bae2", null ],
+    [ "GSLC_FEATURE_XTEXTBOX_EMBED", "GUIslice__config__linux_8h.html#ac8be550f414421507d45f70ce08adb85", null ],
+    [ "GSLC_LOCAL_STR", "GUIslice__config__linux_8h.html#ac8abde841e4e93fdb3451b0344100256", null ],
+    [ "GSLC_LOCAL_STR_LEN", "GUIslice__config__linux_8h.html#a193d1f41a389486c2e6df0148fe42541", null ],
+    [ "GSLC_TOUCH_MAX_EVT", "GUIslice__config__linux_8h.html#a9786d8e5e998ed426f60d002479867d3", null ],
+    [ "GSLC_TOUCH_ROTATE", "GUIslice__config__linux_8h.html#a40427085e300b876a4d621a8cec598ec", null ],
+    [ "GSLC_USE_FLOAT", "GUIslice__config__linux_8h.html#a13853436fcea0ef399f11af82c363798", null ],
+    [ "GSLC_USE_PROGMEM", "GUIslice__config__linux_8h.html#a1396feb3f19d6a326a25f7cbb09dc8ec", null ]
+];
