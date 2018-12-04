@@ -28,6 +28,7 @@
 // THE SOFTWARE.
 //
 // =======================================================================
+/// \file GUIslice_drv_tft_espi.cpp
 
 // Compiler guard for requested driver
 #include "GUIslice_config.h" // Sets DRV_DISP_*
@@ -870,7 +871,7 @@ bool gslc_DrvInitTouch(gslc_tsGui* pGui,const char* acDev) {
 }
 
 
-bool gslc_DrvGetTouch(gslc_tsGui* pGui,int16_t* pnX,int16_t* pnY,uint16_t* pnPress,gslc_teInputRawEvent* peInputEvent,int16_t* pnInputVal);
+bool gslc_DrvGetTouch(gslc_tsGui* pGui,int16_t* pnX,int16_t* pnY,uint16_t* pnPress,gslc_teInputRawEvent* peInputEvent,int16_t* pnInputVal)
 {
 
   if ((pGui == NULL) || (pGui->pvDriver == NULL)) {

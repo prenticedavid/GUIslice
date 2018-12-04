@@ -10,7 +10,7 @@
 ![Example 5](http://www.impulseadventure.com/elec/images/guislice-ctrl2.png)
 
 - [Documentation wiki (github)](https://github.com/ImpulseAdventure/GUIslice/wiki)
-- [GUIslice API documentation (PDF)](https://github.com/ImpulseAdventure/GUIslice/raw/master/docs/GUIslice_ref.pdf)
+- [GUIslice API documentation (online)](https://impulseadventure.github.io/GUIslice/modules.html) & [(PDF)](https://github.com/ImpulseAdventure/GUIslice/raw/master/docs/GUIslice_ref.pdf)
 - [Release notes](https://github.com/ImpulseAdventure/GUIslice/releases)
 - [Website (www.impulseadventure.com)](https://www.impulseadventure.com/elec/guislice-gui.html)
 - **Support email**: guislice @ impulseadventure . com
@@ -52,8 +52,8 @@
 ## Important Note for Arduino Users ##
 - The baseline Arduino (**ATmega328P**) devices have very limited SRAM memory (2KB SRAM, 32KB FLASH).
   Therefore, it is important that GUI elements are stored in FLASH whenever possible. A set of
-  examples that demonstrate this method are located in [`\arduino_min`](https://github.com/ImpulseAdventure/GUIslice/tree/master/arduino_min).
-  The examples in [`\arduino`](https://github.com/ImpulseAdventure/GUIslice/tree/master/arduino) don't use the FLASH optimizations and are less likely
+  examples that demonstrate this method are located in [`/examples/arduino_min`](https://github.com/ImpulseAdventure/GUIslice/tree/master/examples/arduino_min).
+  The examples in [`/examples/arduino`](https://github.com/ImpulseAdventure/GUIslice/tree/master/examples/arduino) don't use the FLASH optimizations and are less likely
   to run on these limited devices.
 - Other Arduino variants and devices such as **ATmega2560** (8KB SRAM, 256KB FLASH), **ESP8266**, **Node-MCU**,
   **Feather M0**, etc. tend to work much better as there is far more SRAM and FLASH available.
