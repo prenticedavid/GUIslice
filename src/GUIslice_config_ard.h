@@ -84,9 +84,9 @@ extern "C" {
   //   applicable to the controller chip in use
 
   //  #define DRV_TOUCH_NONE            // No touchscreen support
-      #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
+  //    #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
   //  #define DRV_TOUCH_ADA_FT6206      // Adafruit FT6206 touch driver
-  //  #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
+    #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
   //  #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
   //  #define DRV_TOUCH_XPT2046         // Arduino build in XPT2046 touch driver (<XPT2046_touch.h>)
   //  #define DRV_TOUCH_HANDLER         // touch handler class
@@ -103,7 +103,8 @@ extern "C" {
   // The Adafruit-GFX library supports a number of displays
   // - Select a display sub-type by uncommenting one of the
   //   following DRV_DISP_ADAGFX_* lines
-  #define DRV_DISP_ADAGFX_ILI9341         // Adafruit ILI9341
+  #define DRV_DISP_ADAGFX_MCUFRIEND         // MCUFRIEND_kbv
+  //#define DRV_DISP_ADAGFX_ILI9341         // Adafruit ILI9341
   //#define DRV_DISP_ADAGFX_ILI9341_8BIT  // Adafruit ILI9341 (8-bit interface)
   //#define DRV_DISP_ADAGFX_ST7735        // Adafruit ST7735
   //#define DRV_DISP_ADAGFX_SSD1306       // Adafruit SSD1306
@@ -287,20 +288,28 @@ extern "C" {
 // -----------------------------------------------------------------------------
 #elif defined(DRV_TOUCH_ADA_SIMPLE)
 
+  //MCUFRIEND_kbv style calibration values: edit macros to match
+  //const int XP=7,XM=A1,YP=A2,YM=6; //ID=0x7783
+  //const int TS_LEFT=208,TS_RT=877,TS_TOP=102,TS_BOT=897;
+  //const int XP=6,XM=A1,YP=A2,YM=7; //ID=0x7789
+  //const int TS_LEFT=885,TS_RT=148,TS_TOP=111,TS_BOT=902;
+  //const int XP=8,XM=A2,YP=A3,YM=9; //240x320 ID=0x9320
+  //const int TS_LEFT=897,TS_RT=122,TS_TOP=944,TS_BOT=141;
+
   // Define 4-wire resistive touchscreen pinout
-  #define ADATOUCH_PIN_YP A2   // "Y+": Must be an analog pin, use "An" notation
-  #define ADATOUCH_PIN_XM A3   // "X-": Must be an analog pin, use "An" notation
-  #define ADATOUCH_PIN_YM 44   // "Y-": Can be a digital pin
-  #define ADATOUCH_PIN_XP 45   // "X+": Can be a digital pin
+  #define ADATOUCH_PIN_YP A3   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_XM A2   // "X-": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 9   // "Y-": Can be a digital pin
+  #define ADATOUCH_PIN_XP 8   // "X+": Can be a digital pin
   #define ADATOUCH_RX 300      // "rxplate"
 
   // Calibration values for touch display
   // - These values may need to be updated to match your display
   // - Typically used in resistive displays
-  #define ADATOUCH_X_MIN 100
-  #define ADATOUCH_Y_MIN 150
-  #define ADATOUCH_X_MAX 900
-  #define ADATOUCH_Y_MAX 900
+  #define ADATOUCH_X_MIN 897
+  #define ADATOUCH_Y_MIN 944
+  #define ADATOUCH_X_MAX 122
+  #define ADATOUCH_Y_MAX 141
 
   // Define pressure threshold for detecting a touch
   #define ADATOUCH_PRESS_MIN 10
