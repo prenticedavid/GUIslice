@@ -62,11 +62,11 @@ extern "C" {
 
   // --------------------------------------------------------------
   // Arduino / ATmega / AVR / Cortex-M0 / nRF52:
-      #define DRV_DISP_ADAGFX           // Adafruit-GFX library
+  //    #define DRV_DISP_ADAGFX           // Adafruit-GFX library
   // --------------------------------------------------------------
   // ESP8266 / ESP32 / NodeMCU:
   //  #define DRV_DISP_ADAGFX           // Adafruit-GFX library
-  //  #define DRV_DISP_TFT_ESPI         // Bodmer/TFT_eSPI library
+    #define DRV_DISP_TFT_ESPI         // Bodmer/TFT_eSPI library
   //  #define DRV_DISP_M5STACK          // m5stack/M5Stack library
   // --------------------------------------------------------------
   // STM32:
@@ -84,10 +84,10 @@ extern "C" {
   //   applicable to the controller chip in use
 
   //  #define DRV_TOUCH_NONE            // No touchscreen support
-      #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
+  //    #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
   //  #define DRV_TOUCH_ADA_FT6206      // Adafruit FT6206 touch driver
   //  #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
-  //  #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
+    #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
   //  #define DRV_TOUCH_XPT2046         // Arduino build in XPT2046 touch driver (<XPT2046_touch.h>)
   //  #define DRV_TOUCH_HANDLER         // touch handler class
 
@@ -315,7 +315,9 @@ extern "C" {
   // Define the XPT2046 touch driver calibration values
   // - The following are some example defaults, but they should be updated
   //   to match your specific touch device.
-  #define TFT_ESPI_TOUCH_CALIB { 321,3498,280,3593,3 }
+  //#define TFT_ESPI_TOUCH_CALIB { 321,3498,280,3593,3 }
+  //#define TFT_ESPI_TOUCH_CALIB { 321,3498,280,3593,1 } //old
+  #define TFT_ESPI_TOUCH_CALIB { 321,3498,280,3593,7 } //new
 
 // -----------------------------------------------------------------------------
 #elif defined(DRV_TOUCH_XPT2046)
@@ -361,7 +363,7 @@ extern "C" {
   // Default rotation of the touch, you can specify values 0,1,2,3, rotation is clockwise
   // it is useful to specify the GLSC_TOUCH_ROTATE_OFFSET as an offset to the GLSC_ROTATE,
   // thus changing GLSC_ROTATE automatically adopts the GLSC_TOUCH_ROTATE
-  #define GSLC_TOUCH_ROTATE 1
+  #define GSLC_TOUCH_ROTATE 0
   
   // TODO: maybe those macros should be moved to one include file which is included by all drivers
   #define TOUCH_ROTATION_DATA 0x6350
