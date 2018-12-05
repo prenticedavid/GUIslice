@@ -79,6 +79,11 @@
   #elif defined(DRV_DISP_ADAGFX_PCD8544)
     #include <Adafruit_PCD8544.h>
     #include <SPI.h>
+  #elif defined(DRV_DISP_ADAGFX_MCUFRIEND)
+    #include <MCUFRIEND_kbv.h>
+    #if (GSLC_SD_EN)
+      #include <SD.h>   // Include support for SD card access
+    #endif
   #else
     #error "CONFIG: Need to enable a supported DRV_DISP_ADAGFX_* option in GUIslice_config_ard.h"
   #endif
@@ -181,6 +186,10 @@ extern "C" {
   #endif
 
 // ------------------------------------------------------------------------
+  #elif defined(DRV_DISP_ADAGFX_MCUFRIEND)
+    MCUFRIEND_kbv m_disp;
+// ------------------------------------------------------------------------
+
 #endif // DRV_DISP_ADAGFX_*
 
 
@@ -300,6 +309,13 @@ bool gslc_DrvInit(gslc_tsGui* pGui)
     #elif defined(DRV_DISP_ADAGFX_PCD8544)
       m_disp.begin();
       //m_disp.setContrast(50); Set the contrast level
+
+    #elif defined(DRV_DISP_ADAGFX_MCUFRIEND)
+      uint16_t identifier = m_disp.readID();
+      m_disp.begin(identifier);
+      m_disp.setRotation( pGui->nRotation );
+      pGui->nDispW = m_disp.width();
+      pGui->nDispH = m_disp.height();
 
     #endif
 
@@ -1241,12 +1257,12 @@ bool gslc_TDrvGetTouch(gslc_tsGui* pGui,int16_t* pnX,int16_t* pnY,uint16_t* pnPr
 
     // For resistive displays, perform constraint and scaling
     #if defined(DRV_TOUCH_ADA_STMPE610) || defined(DRV_TOUCH_ADA_SIMPLE) || defined(DRV_TOUCH_XPT2046)
-      // Perform constraining to input boundaries
-      nInputX = constrain(nInputX,ADATOUCH_X_MIN,ADATOUCH_X_MAX);
-      nInputY = constrain(nInputY,ADATOUCH_Y_MIN,ADATOUCH_Y_MAX);
       // Perform scaling from input to output
       nOutputX = map(nInputX,ADATOUCH_X_MIN,ADATOUCH_X_MAX,0,nDispOutMaxX);
       nOutputY = map(nInputY,ADATOUCH_Y_MIN,ADATOUCH_Y_MAX,0,nDispOutMaxY);
+      // Perform constraining to OUTPUT boundaries .kbv
+      nOutputX = constrain(nOutputX,0,nDispOutMaxX);
+      nOutputY = constrain(nOutputY,0,nDispOutMaxY);
     #else
       // No scaling from input to output
       nOutputX = nInputX;
