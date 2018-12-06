@@ -298,21 +298,65 @@ extern "C" {
   //const int XP=8,XM=A2,YP=A3,YM=9; //240x320 ID=0x9320
   //const int TS_LEFT=897,TS_RT=122,TS_TOP=944,TS_BOT=141;
 
-  // Define 4-wire resistive touchscreen pinout
-  #define ADATOUCH_PIN_YP A1   // "Y+": Must be an analog pin, use "An" notation
+  //GUIslice seems to expect a Landscape calibration.
+  //Most display controllers are Portrait.   Most TouchScreens are wired Portrait.
+  //i.e. X_MIN, X_MAX refer to Portrait calibration: TS_TOP, TS_BOT  
+#define MCUFRIEND_TOUCH 0x8031  //select a specific wiring and calibration
+#if MCUFRIEND_TOUCH == 0x7783
+  #define ADATOUCH_PIN_XP 7    // "X+": Can be a digital pin
+  #define ADATOUCH_PIN_XM A1   // "X-": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YP A2   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 6    // "Y-": Can be a digital pin
+  #define ADATOUCH_RX 300      // "rxplate"
+  #define ADATOUCH_Y_MIN 208
+  #define ADATOUCH_Y_MAX 877
+  #define ADATOUCH_X_MIN 102
+  #define ADATOUCH_X_MAX 897
+#elif MCUFRIEND_TOUCH == 0x7789
+  #define ADATOUCH_PIN_XP 6    // "X+": Can be a digital pin
+  #define ADATOUCH_PIN_XM A1   // "X-": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YP A2   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 7    // "Y-": Can be a digital pin
+  #define ADATOUCH_RX 300      // "rxplate"
+  #define ADATOUCH_Y_MIN 885
+  #define ADATOUCH_Y_MAX 148
+  #define ADATOUCH_X_MIN 111
+  #define ADATOUCH_X_MAX 902
+#elif MCUFRIEND_TOUCH == 0x8031
+  #define ADATOUCH_PIN_XP 6    // "X+": Can be a digital pin
   #define ADATOUCH_PIN_XM A2   // "X-": Must be an analog pin, use "An" notation
-  #define ADATOUCH_PIN_YM 7   // "Y-": Can be a digital pin
-  #define ADATOUCH_PIN_XP 6   // "X+": Can be a digital pin
+  #define ADATOUCH_PIN_YP A1   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 7    // "Y-": Can be a digital pin
+  #define ADATOUCH_RX 300      // "rxplate"
+  #define ADATOUCH_Y_MIN 889
+  #define ADATOUCH_Y_MAX 151
+  #define ADATOUCH_X_MIN 121
+  #define ADATOUCH_X_MAX 886
+#elif MCUFRIEND_TOUCH == 0x9320
+  #define ADATOUCH_PIN_XP 8    // "X+": Can be a digital pin
+  #define ADATOUCH_PIN_XM A2   // "X-": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YP A3   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 9    // "Y-": Can be a digital pin
+  #define ADATOUCH_RX 300      // "rxplate"
+  #define ADATOUCH_Y_MIN 897
+  #define ADATOUCH_Y_MAX 122
+  #define ADATOUCH_X_MIN 944
+  #define ADATOUCH_X_MAX 141
+#else                          // original default values
+  #define ADATOUCH_PIN_YP A2   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_XM A3   // "X-": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 44   // "Y-": Can be a digital pin
+  #define ADATOUCH_PIN_XP 45   // "X+": Can be a digital pin
   #define ADATOUCH_RX 300      // "rxplate"
 
   // Calibration values for touch display
   // - These values may need to be updated to match your display
   // - Typically used in resistive displays
-  #define ADATOUCH_X_MIN 889
-  #define ADATOUCH_Y_MIN 121
-  #define ADATOUCH_X_MAX 151
-  #define ADATOUCH_Y_MAX 886
-
+  #define ADATOUCH_X_MIN 100
+  #define ADATOUCH_Y_MIN 150
+  #define ADATOUCH_X_MAX 900
+  #define ADATOUCH_Y_MAX 900
+#endif
   // Define pressure threshold for detecting a touch
   #define ADATOUCH_PRESS_MIN 10
   #define ADATOUCH_PRESS_MAX 1000
