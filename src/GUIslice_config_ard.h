@@ -84,11 +84,11 @@ extern "C" {
   //   applicable to the controller chip in use
 
   //  #define DRV_TOUCH_NONE            // No touchscreen support
-      #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
+  //    #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
   //  #define DRV_TOUCH_ADA_FT6206      // Adafruit FT6206 touch driver
   //  #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
   //  #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
-  //  #define DRV_TOUCH_XPT2046         // Arduino build in XPT2046 touch driver (<XPT2046_touch.h>)
+    #define DRV_TOUCH_XPT2046         // Arduino build in XPT2046 touch driver (<XPT2046_touch.h>)
   //  #define DRV_TOUCH_HANDLER         // touch handler class
 
 
@@ -115,7 +115,7 @@ extern "C" {
   // - Please refer to "docs/GUIslice_config_guide.xlsx" for detailed examples
   #define ADAGFX_PIN_CS    10   // Display chip select
   #define ADAGFX_PIN_DC     9   // Display SPI data/command
-  #define ADAGFX_PIN_RST    0   // Display Reset (some displays could use pin 11)
+  #define ADAGFX_PIN_RST    8   // Display Reset (some displays could use pin 11)
   #define ADAGFX_PIN_SDCS   4   // SD card chip select
   #define ADAGFX_PIN_WR    A1   // Display write pin (for parallel displays)
   #define ADAGFX_PIN_RD    A0   // Display read pin (for parallel displays)
@@ -327,10 +327,11 @@ extern "C" {
   //   PB13   SCLK
   //   PB14   MISO
   //   PB15   MOSI
-  #define XPT2046_DEFINE_DPICLASS SPIClass XPT2046_spi(2); //Create an SPI instance on SPI2 port
+  //#define XPT2046_DEFINE_DPICLASS SPIClass XPT2046_spi(2); //Create an SPI instance on SPI2 port
+  #define XPT2046_DEFINE_DPICLASS SPIClass XPT2046_spi;
 
   // Chip select pin for touch SPI2
-  #define XPT2046_CS PB12
+  #define XPT2046_CS 3 //PB12
 
   // Calibration values for touch display
   // - These values may need to be updated to match your display
@@ -375,9 +376,9 @@ extern "C" {
   // - Please refer to "docs/GUIslice_config_guide.xlsx" for detailed examples
   // - NOTE: Both settings, GLSC_TOUCH_ROTATE and SWAP / FLIP are applied, 
   //         try to set _SWAP_XY and _FLIP_X/Y to 0 and only use GLSC_TOUCH_ROTATE
-  #define ADATOUCH_SWAP_XY  0
+  #define ADATOUCH_SWAP_XY  1
   #define ADATOUCH_FLIP_X   0
-  #define ADATOUCH_FLIP_Y   0
+  #define ADATOUCH_FLIP_Y   1
 
   // Define the maximum number of touch events that are handled
   // per gslc_Update() call. Normally this can be set to 1 but certain
