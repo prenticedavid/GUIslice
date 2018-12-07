@@ -84,9 +84,9 @@ extern "C" {
   //   applicable to the controller chip in use
 
   //  #define DRV_TOUCH_NONE            // No touchscreen support
-      #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
+  //    #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
   //  #define DRV_TOUCH_ADA_FT6206      // Adafruit FT6206 touch driver
-  //  #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
+    #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
   //  #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
   //  #define DRV_TOUCH_XPT2046         // Arduino build in XPT2046 touch driver (<XPT2046_touch.h>)
   //  #define DRV_TOUCH_HANDLER         // touch handler class
@@ -103,7 +103,8 @@ extern "C" {
   // The Adafruit-GFX library supports a number of displays
   // - Select a display sub-type by uncommenting one of the
   //   following DRV_DISP_ADAGFX_* lines
-  #define DRV_DISP_ADAGFX_ILI9341         // Adafruit ILI9341
+  #define DRV_DISP_ADAGFX_MCUFRIEND         // MCUFRIEND_kbv
+  //#define DRV_DISP_ADAGFX_ILI9341         // Adafruit ILI9341
   //#define DRV_DISP_ADAGFX_ILI9341_8BIT  // Adafruit ILI9341 (8-bit interface)
   //#define DRV_DISP_ADAGFX_ST7735        // Adafruit ST7735
   //#define DRV_DISP_ADAGFX_SSD1306       // Adafruit SSD1306
@@ -288,10 +289,10 @@ extern "C" {
 #elif defined(DRV_TOUCH_ADA_SIMPLE)
 
   // Define 4-wire resistive touchscreen pinout
-  #define ADATOUCH_PIN_YP A2   // "Y+": Must be an analog pin, use "An" notation
-  #define ADATOUCH_PIN_XM A3   // "X-": Must be an analog pin, use "An" notation
-  #define ADATOUCH_PIN_YM 44   // "Y-": Can be a digital pin
-  #define ADATOUCH_PIN_XP 45   // "X+": Can be a digital pin
+  #define ADATOUCH_PIN_YP A1   // "Y+": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_XM A2   // "X-": Must be an analog pin, use "An" notation
+  #define ADATOUCH_PIN_YM 7   // "Y-": Can be a digital pin
+  #define ADATOUCH_PIN_XP 6   // "X+": Can be a digital pin
   #define ADATOUCH_RX 300      // "rxplate"
 
   // Calibration values for touch display
