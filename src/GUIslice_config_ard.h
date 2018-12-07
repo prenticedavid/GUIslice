@@ -376,9 +376,27 @@ extern "C" {
   // - Please refer to "docs/GUIslice_config_guide.xlsx" for detailed examples
   // - NOTE: Both settings, GLSC_TOUCH_ROTATE and SWAP / FLIP are applied, 
   //         try to set _SWAP_XY and _FLIP_X/Y to 0 and only use GLSC_TOUCH_ROTATE
-  #define ADATOUCH_SWAP_XY  0
-  #define ADATOUCH_FLIP_X   0
-  #define ADATOUCH_FLIP_Y   0
+/*
+const int XP=6,XM=A2,YP=A1,YM=7; //240x320 ID=0x1520   001
+const int TS_LEFT=893,TS_RT=104,TS_TOP=99,TS_BOT=892;
+const int XP=7,XM=A1,YP=A2,YM=6; //240x320 ID=0x2053   111
+const int TS_LEFT=138,TS_RT=891,TS_TOP=132,TS_BOT=909;
+const int XP=7,XM=A1,YP=A2,YM=6; //240x320 ID=0x7783   111
+const int TS_LEFT=208,TS_RT=877,TS_TOP=102,TS_BOT=897;
+const int XP=6,XM=A1,YP=A2,YM=7; //240x320 ID=0x7789   DIFFERENT XP,YM
+const int TS_LEFT=885,TS_RT=148,TS_TOP=111,TS_BOT=902;
+const int XP=6,XM=A2,YP=A1,YM=7; //240x320 ID=0x8031   001
+const int TS_LEFT=889,TS_RT=151,TS_TOP=121,TS_BOT=886;
+const int XP=8,XM=A2,YP=A3,YM=9; //240x320 ID=0x9320   DIFFERENT XM,YP
+const int TS_LEFT=897,TS_RT=122,TS_TOP=944,TS_BOT=141;
+const int XP=6,XM=A2,YP=A1,YM=7; //240x320 ID=0x9341   011
+const int TS_LEFT=907,TS_RT=136,TS_TOP=942,TS_BOT=139;
+const int XP=7,XM=A1,YP=A2,YM=6; //240x400 ID=0x9327   111
+const int TS_LEFT=126,TS_RT=905,TS_TOP=106,TS_BOT=966;
+*/
+  #define ADATOUCH_SWAP_XY  1
+  #define ADATOUCH_FLIP_X   1
+  #define ADATOUCH_FLIP_Y   1
 
   // Define the maximum number of touch events that are handled
   // per gslc_Update() call. Normally this can be set to 1 but certain
