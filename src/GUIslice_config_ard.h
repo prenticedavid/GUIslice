@@ -376,9 +376,9 @@ extern "C" {
   // - Please refer to "docs/GUIslice_config_guide.xlsx" for detailed examples
   // - NOTE: Both settings, GLSC_TOUCH_ROTATE and SWAP / FLIP are applied, 
   //         try to set _SWAP_XY and _FLIP_X/Y to 0 and only use GLSC_TOUCH_ROTATE
-  #define ADATOUCH_SWAP_XY  1
-  #define ADATOUCH_FLIP_X   0
-  #define ADATOUCH_FLIP_Y   1
+  #define ADATOUCH_SWAP_XY  1  //Red ILI9341 with XPT2046
+  #define ADATOUCH_FLIP_X   1  //old=01, new=10
+  #define ADATOUCH_FLIP_Y   0  //
 
   // Define the maximum number of touch events that are handled
   // per gslc_Update() call. Normally this can be set to 1 but certain
