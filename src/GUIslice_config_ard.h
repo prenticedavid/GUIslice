@@ -62,11 +62,11 @@ extern "C" {
 
   // --------------------------------------------------------------
   // Arduino / ATmega / AVR / Cortex-M0 / nRF52:
-      #define DRV_DISP_ADAGFX           // Adafruit-GFX library
+  //    #define DRV_DISP_ADAGFX           // Adafruit-GFX library
   // --------------------------------------------------------------
   // ESP8266 / ESP32 / NodeMCU:
   //  #define DRV_DISP_ADAGFX           // Adafruit-GFX library
-  //  #define DRV_DISP_TFT_ESPI         // Bodmer/TFT_eSPI library
+    #define DRV_DISP_TFT_ESPI         // Bodmer/TFT_eSPI library
   //  #define DRV_DISP_M5STACK          // m5stack/M5Stack library
   // --------------------------------------------------------------
   // STM32:
@@ -84,10 +84,10 @@ extern "C" {
   //   applicable to the controller chip in use
 
   //  #define DRV_TOUCH_NONE            // No touchscreen support
-      #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
+  //    #define DRV_TOUCH_ADA_STMPE610    // Adafruit STMPE610 touch driver
   //  #define DRV_TOUCH_ADA_FT6206      // Adafruit FT6206 touch driver
   //  #define DRV_TOUCH_ADA_SIMPLE      // Adafruit Touchscreen
-  //  #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
+    #define DRV_TOUCH_TFT_ESPI        // TFT_eSPI integrated XPT2046 touch driver
   //  #define DRV_TOUCH_XPT2046         // Arduino build in XPT2046 touch driver (<XPT2046_touch.h>)
   //  #define DRV_TOUCH_HANDLER         // touch handler class
 
@@ -375,8 +375,8 @@ extern "C" {
   // - Please refer to "docs/GUIslice_config_guide.xlsx" for detailed examples
   // - NOTE: Both settings, GLSC_TOUCH_ROTATE and SWAP / FLIP are applied, 
   //         try to set _SWAP_XY and _FLIP_X/Y to 0 and only use GLSC_TOUCH_ROTATE
-  #define ADATOUCH_SWAP_XY  0
-  #define ADATOUCH_FLIP_X   0
+  #define ADATOUCH_SWAP_XY  1  //Red ILI9341 with XPT2046
+  #define ADATOUCH_FLIP_X   0  //Old=111, New=100
   #define ADATOUCH_FLIP_Y   0
 
   // Define the maximum number of touch events that are handled
