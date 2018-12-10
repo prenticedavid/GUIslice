@@ -304,7 +304,7 @@ extern "C" {
   #define ADATOUCH_Y_MAX 900
 
   // Define pressure threshold for detecting a touch
-  #define ADATOUCH_PRESS_MIN 10
+  #define ADATOUCH_PRESS_MIN 200   //was 10.  200 is safer for STM32
   #define ADATOUCH_PRESS_MAX 1000
 
 // -----------------------------------------------------------------------------
