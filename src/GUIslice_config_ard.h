@@ -328,7 +328,9 @@ extern "C" {
   //   PB14   MISO
   //   PB15   MOSI
   //#define XPT2046_DEFINE_DPICLASS SPIClass XPT2046_spi(2); //Create an SPI instance on SPI2 port
-  #define XPT2046_DEFINE_DPICLASS SPIClass XPT2046_spi;
+  //#define XPT2046_DEFINE_DPICLASS SPIClass XPT2046_spi;
+  #define XPT2046_DEFINE_DPICLASS 
+  #define XPT2046_spi              SPI
 
   // Chip select pin for touch SPI2
   #define XPT2046_CS 3 //PB12
